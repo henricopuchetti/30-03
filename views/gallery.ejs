@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+<body>
+    <h1>Gallery - Gerenciameto de conteudo</h1>
+    <h3>Gallery - adicionar</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="imagem">Imagem:</label>
+        <input type="file" name="imagem" id="" required><br>
+        <input type="submit" value="gravar">
+    </form><br>
+    <h3>Gallery - lista</h3>
+    <table>
+        <% for (var n=0; n<dados.length; n++){%>
+    <tr>
+        <td><%=dados[n].arquivo%></td>
+        <td><img src="./assets/images/<%=dados[n].arquivo%>" style="height: auto;width: 200px;"></td>
+    </tr>
+        <%}%>
+    </table>    
+    <a href="/admin">Voltar</a>
+</body>
+</html>

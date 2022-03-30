@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my grid</title>
+</head>
+<body>
+    <h1>My grid - Gerenciameto de conteudo</h1>
+    <h3>My grid - adicionar</h3>
+    <form action="" method="post">
+        <label for="titulo">Tiulo:</label>
+        <input type="text" name="titulo" id="" required><br>
+        <label for="texto">Texto:</label>
+        <textarea name="texto" id="" cols="30" rows="10" required></textarea><br>
+        <input type="submit" value="gravar">
+    </form><br>
+    <h3>My grid - lista</h3>
+    <table>
+        <% for (var n=0; n<dados.length; n++){%>
+    <tr>
+        <td><%=dados[n].titulo%></td>
+        <td><%=dados[n].texto%></td>
+    </tr>
+        <%}%>
+    </table>
+    <a href="/admin">Voltar</a>
+</body>
+</html>
